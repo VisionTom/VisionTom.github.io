@@ -166,10 +166,15 @@ var chart = d3.chart.dependencyWheel()
     var composerjson = JSON.parse(document.getElementById('composerJson').value);
     var composerlock = JSON.parse(document.getElementById('composerLock').value);
     var data = {
-		  packageNames: ['Main', 'A', 'B'],
-		  matrix: [[0, 1, 1], // Main depends on A and B
-				   [0, 0, 1], // A depends on B
-				   [0, 0, 0]] // B doesn't depend on A or Main
+		  packageNames: ['Projekt Onlineshop', 'Projekt Bau einer automatischen Müllentsorgung', 'Projekt Windmaschine', 'Projekt Staubsauger', 'Projekt Einkaufen', 'Projekt Putzen', 'Projekt Schlafen', 'Projekt Staubwischen'],
+		  matrix: [[0, 1, 1, 1, 1, 1, 1, 1], 
+				   [0, 1, 0, 0, 0, 0, 1, 1], 
+				   [0, 0, 0, 1, 0, 0, 0, 1]
+				   [1, 1, 0, 0, 0, 1, 1, 1]
+				   [1, 1, 1, 1, 1, 0, 0, 0]
+				   [1, 1, 1, 1, 1, 1, 1, 0]
+				   [0, 1, 1, 0, 1, 0, 0, 1]
+				   [0, 0, 1, 1, 0, 1, 0, 0]] 
 		};
     d3.select('#chart_placeholder svg').remove();
     d3.select('#chart_placeholder')
