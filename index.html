@@ -144,7 +144,12 @@ var chart = d3.chart.dependencyWheel()
 
   d3.json('data/composer.json', function(composerjson) {
     d3.json('data/composer.lock', function(composerlock) {
-      var data = buildMatrixFromComposerJsonAndLock(composerjson, composerlock);
+      var data = {
+		  packageNames: ['Main', 'A', 'B'],
+		  matrix: [[0, 1, 1], // Main depends on A and B
+				   [0, 0, 1], // A depends on B
+				   [0, 0, 0]] // B doesn't depend on A or Main
+		};
       d3.select('#chart_placeholder')
         .datum(data)
         .call(chart);
@@ -155,7 +160,12 @@ var chart = d3.chart.dependencyWheel()
     e.preventDefault();
     var composerjson = JSON.parse(document.getElementById('composerJson').value);
     var composerlock = JSON.parse(document.getElementById('composerLock').value);
-    var data = buildMatrixFromComposerJsonAndLock(composerjson, composerlock);
+    var data = {
+		  packageNames: ['Main', 'A', 'B'],
+		  matrix: [[0, 1, 1], // Main depends on A and B
+				   [0, 0, 1], // A depends on B
+				   [0, 0, 0]] // B doesn't depend on A or Main
+		};
     d3.select('#chart_placeholder svg').remove();
     d3.select('#chart_placeholder')
       .datum(data)
