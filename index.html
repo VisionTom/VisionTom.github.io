@@ -146,11 +146,11 @@ var chart = d3.chart.dependencyWheel()
     d3.json('data/composer.lock', function(composerlock) {
       var data = {
 		  packageNames: ['Projekt Onlineshop', 'Projekt Bau einer automatischen Müllentsorgung', 'Projekt Windmaschine', 'Projekt Staubsauger', 'Projekt Einkaufen', 'Projekt Putzen', 'Projekt Schlafen', 'Projekt Staubwischen'],
-		  matrix: [[0, 1, 1, 1, 1, 1, 1, 1], 
+		  matrix: [[0, 1, 1, 0, 0, 0, 0, 0], 
 				   [0, 1, 0, 0, 0, 0, 1, 1], 
 				   [0, 0, 0, 1, 0, 0, 0, 1],
-				   [1, 1, 0, 0, 0, 1, 1, 1],
-				   [1, 1, 1, 1, 1, 0, 0, 0],
+				   [1, 1, 0, 0, 0, 1, 0, 1],
+				   [1, 0, 0, 1, 0, 0, 0, 0],
 				   [1, 1, 1, 1, 1, 1, 1, 0],
 				   [0, 1, 1, 0, 1, 0, 0, 1],
 				   [0, 0, 1, 1, 0, 1, 0, 0]] 
@@ -167,14 +167,14 @@ var chart = d3.chart.dependencyWheel()
     var composerlock = JSON.parse(document.getElementById('composerLock').value);
     var data = {
 		  packageNames: ['Projekt Onlineshop', 'Projekt Bau einer automatischen Müllentsorgung', 'Projekt Windmaschine', 'Projekt Staubsauger', 'Projekt Einkaufen', 'Projekt Putzen', 'Projekt Schlafen', 'Projekt Staubwischen'],
-		  matrix: [[0, 1, 1, 1, 1, 1, 1, 1], 
+		  matrix: [[0, 1, 1, 0, 0, 0, 0, 0], 
 				   [0, 1, 0, 0, 0, 0, 1, 1], 
 				   [0, 0, 0, 1, 0, 0, 0, 1],
-				   [1, 1, 0, 0, 0, 1, 1, 1],
-				   [1, 1, 1, 1, 1, 0, 0, 0],
+				   [1, 1, 0, 0, 0, 1, 0, 1],
+				   [1, 0, 0, 1, 0, 0, 0, 0],
 				   [1, 1, 1, 1, 1, 1, 1, 0],
 				   [0, 1, 1, 0, 1, 0, 0, 1],
-				   [0, 0, 1, 1, 0, 1, 0, 0]] 
+				   [0, 0, 1, 1, 0, 1, 0, 0]]  
 		};
     d3.select('#chart_placeholder svg').remove();
     d3.select('#chart_placeholder')
