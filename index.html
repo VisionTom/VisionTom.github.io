@@ -204,9 +204,10 @@ var chart = d3.chart.dependencyWheel()
   document.getElementById('composerRedraw').addEventListener('submit', function(e) {
     e.preventDefault();
     var composerjson = JSON.parse(document.getElementById('composerJson').value);
-    var composerlock = JSON.parse(document.getElementById('composerLock').value);var data = {
+    var composerlock = JSON.parse(document.getElementById('composerLock').value);
+	  var data = {
 
-  packageNames: ['BK 2.0', 'Future Workplace', 'Geschäftspartnerneugliederung', 'S&V Release', 'Grüne Dropbox', 'Online Basisdienste/Online Basisdienste', 'Online Basisdienste/IAM', 'Online Basisdienste/Paas', 'Online Basisdienste/Dokumenten- und Belegverwaltung', 'Online Basisdienste/Stammdaten', 'Security', 'Integrationsleitlinie', 'DATEVconnect, 'DATEVconnect online', 'RZ-Strategie', 'Preisstrategie', 'Rechteverwaltung', 'Inbetriebnahme Unternehmen online', 'Portale/Portale', 'Portale/Steuern online', 'Portale/Lernplattform', 'Agile Transition', 'Rollen und Laufbahnen' ],
+  packageNames: ['BK 2.0', 'Future Workplace', 'Geschäftspartnerneugliederung', 'S&V Release', 'Grüne Dropbox', 'Online Basisdienste/Online Basisdienste', 'Online Basisdienste/IAM', 'Online Basisdienste/Paas', 'Online Basisdienste/Dokumenten- und Belegverwaltung', 'Online Basisdienste/Stammdaten', 'Security', 'Integrationsleitlinie', 'DATEVconnect', 'DATEVconnect online', 'RZ-Strategie', 'Preisstrategie', 'Rechteverwaltung', 'Inbetriebnahme Unternehmen online', 'Portale/Portale', 'Portale/Steuern online', 'Portale/Lernplattform', 'Agile Transition', 'Rollen und Laufbahnen' ],
 
   matrix: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // BK 2.0 depends on nothing
 
