@@ -143,10 +143,9 @@ var chart = d3.chart.dependencyWheel()
   var chart = d3.chart.dependencyWheel();
 
   d3.json('data/composer.json', function(composerjson) {
-    d3.json('data/composer.lock', function(composerlock) {
-      var data = {
+    d3.json('data/composer.lock', function(composerlock) {var data = {
 
-  packageNames: ['BK 2.0', 'Future Workplace', 'Geschäftspartnerneugliederung', 'S&V Release', 'Grüne Dropbox', 'Online Basisdienste/Online Basisdienste', 'Online Basisdienste/IAM', 'Online Basisdienste/Paas', 'Online Basisdienste/Dokumenten- und Belegverwaltung', 'Online Basisdienste/Stammdaten', 'Security', 'Integrationsleitlinie', 'DATEVconnect, 'DATEVconnect online', 'RZ-Strategie', 'Preisstrategie', 'Rechteverwaltung', 'Inbetriebnahme Unternehmen online', 'Portale/Portale', 'Portale/Steuern online', 'Portale/Lernplattform', 'Agile Transition', 'Rollen und Laufbahnen' ],
+  packageNames: ['BK 2.0', 'Future Workplace', 'Geschäftspartnerneugliederung', 'S&V Release', 'Grüne Dropbox', 'Online Basisdienste/Online Basisdienste', 'Online Basisdienste/IAM', 'Online Basisdienste/Paas', 'Online Basisdienste/Dokumenten- und Belegverwaltung', 'Online Basisdienste/Stammdaten', 'Security', 'Integrationsleitlinie', 'DATEVconnect', 'DATEVconnect online', 'RZ-Strategie', 'Preisstrategie', 'Rechteverwaltung', 'Inbetriebnahme Unternehmen online', 'Portale/Portale', 'Portale/Steuern online', 'Portale/Lernplattform', 'Agile Transition', 'Rollen und Laufbahnen' ],
 
   matrix: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // BK 2.0 depends on nothing
 
@@ -204,18 +203,17 @@ var chart = d3.chart.dependencyWheel()
   document.getElementById('composerRedraw').addEventListener('submit', function(e) {
     e.preventDefault();
     var composerjson = JSON.parse(document.getElementById('composerJson').value);
-    var composerlock = JSON.parse(document.getElementById('composerLock').value);
-	  var data = {
+    var composerlock = JSON.parse(document.getElementById('composerLock').value);var data = {
 
-  packageNames: ['BK 2.0', 'Future Workplace', 'Geschäftspartnerneugliederung', 'S&V Release', 'Grüne Dropbox', 'Online Basisdienste/Online Basisdienste', 'Online Basisdienste/IAM', 'Online Basisdienste/Paas', 'Online Basisdienste/Dokumenten- und Belegverwaltung', 'Online Basisdienste/Stammdaten', 'Security', 'Integrationsleitlinie', 'DATEVconnect', 'DATEVconnect online', 'RZ-Strategie', 'Preisstrategie', 'Rechteverwaltung', 'Inbetriebnahme Unternehmen online', 'Portale/Portale', 'Portale/Steuern online', 'Portale/Lernplattform', 'Agile Transition', 'Rollen und Laufbahnen' ],
+  packageNames: ['BK 2.0', 'Future Workplace', 'Geschäftspartnerneugliederung', 'S&V Release', 'Grüne Dropbox', 'Online Basisdienste/Online Basisdienste', 'Online Basisdienste/IAM', 'Online Basisdienste/Paas', 'Online Basisdienste/Dokumenten- und Belegverwaltung', 'Online Basisdienste/Stammdaten', 'Security', 'Integrationsleitlinie', 'DATEVconnect', 'DATEVconnect online', 'RZ-Strategie', 'Preisstrategie', 'Rechteverwaltung', 'Inbetriebnahme Unternehmen online', 'Portale/Portale', 'Portale/Steuern online', 'Portale/Lernplattform', 'Agile Transition', 'Rollen und Laufbahnen'],
 
-  matrix: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // BK 2.0 depends on nothing
+ matrix: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // BK 2.0 depends on nothing
 
-           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Future Workplace depends on BK 2.0 and Security
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Future Workplace depends on BK 2.0 and Security
 
-           [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Geschäftspartnerneugliederung depends on S&V Release
+[0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Geschäftspartnerneugliederung depends on S&V Release
 
-           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // S&V Release depends on nothing
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // S&V Release depends on nothing
 
 [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Grüne Dropbox depends on IAM and Security
 
